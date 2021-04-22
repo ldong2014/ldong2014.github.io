@@ -7,6 +7,8 @@ cd /etc/yum.repos.d
 mv CentOS-Base.repo  CentOS-Base.repo.save
 curl http://file.kangle.odata.cc/repo/Centos-6.repo > CentOS-Base.repo
 curl  http://file.kangle.odata.cc/repo/epel-6.repo > epel.repo
+yum clean all
+yum makecahce
 yum update -y
 yum install -y gcc git lz4-devel openssl-devel dialog tcpdump ntpdate
 yum install -y telnet bind-utils traceroute gd-devel httpd
